@@ -1,6 +1,6 @@
 # [level 3] 자물쇠와 열쇠 - 60059 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/60059#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/60059) 
 
 ### 성능 요약
 
