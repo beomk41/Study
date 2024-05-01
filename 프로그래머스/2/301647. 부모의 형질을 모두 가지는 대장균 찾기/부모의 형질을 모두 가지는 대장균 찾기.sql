@@ -1,0 +1,21 @@
+SELECT 
+    E.ID, 
+    E.GENOTYPE, 
+    PARENT_G AS PARENT_GENOTYPE
+FROM 
+    ECOLI_DATA AS E
+INNER JOIN
+    (
+        SELECT    
+            S.ID  AS PARENT_ID,
+            S.GENOTYPE AS PARENT_G
+        FROM
+            ECOLI_DATA AS S
+    ) AS J
+ON
+    J.PARENT_ID = E.PARENT_ID
+WHERE
+    E.PARENT_ID IS NOT NULL AND
+    E.GENOTYPE & PARENT_G = PARENT_G
+ORDER BY 
+    ID ASC;
